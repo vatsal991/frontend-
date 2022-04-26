@@ -1,0 +1,83 @@
+.maxbutton{
+  display: block;
+}
+.download ul{
+  display: none;
+}
+.download h2{
+  display: none;
+}
+.download p:nth-child(5){
+  display: none;
+}
+.download img{
+  display: none;
+}
+.download span{
+  text-decoration: none;
+}
+.download .summary_text{
+  display: none;
+}
+.maxbutton{
+  width: 100px;
+  height: 10%;
+  padding: 10px;
+  text-decoration: none;
+  border: 2px solid red;
+  color: aliceblue;
+  border-radius: 10px;
+  margin: auto;
+}
+#root > div > div > div > h3:nth-child(3){
+  display: none;
+}
+#root > div > div > div > h3:nth-child(4) > span{
+  display: none;
+}
+#root > div > div > div > p:nth-child(7){
+  display: none;
+}
+
+#root > div > div > div > h3:nth-child(4){
+  display: none;
+}
+#root > div > div > div > p:nth-child(1){
+  display: none;
+}
+#root > div > div > div > p:nth-child(2){
+  display: none;
+}
+@media only screen and (max-width: 767px) {
+    .SingleContainer2{
+      flex-direction: column;
+    }
+    .textContainer{
+      width: 90%;
+    }
+    .sidebar{
+      display: none;
+    }
+    .info{
+      width: 100%;
+    }
+}
+.imdbwp__thumb{
+    display: none;
+}
+.imdbwp__content{
+    display: none;
+}
+.summary_text{
+    color: aliceblue;
+}
+
+@media only screen and (max-width: 480px) {
+  .SingleContainer{
+    width: 90%;
+  }
+  .textContainer{
+    width: 100%;
+  }
+
+}
