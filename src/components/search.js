@@ -52,11 +52,13 @@ return(
       <div className="maincontainer">
    {loading?
    data.map((Movies)=>{
-      const {title,image,id} =Movies
+      const {title,id} =Movies
+      const images = JSON.stringify(Movies.image).replace(/"/g, '')
+
       return(
          <div className="col-lg-2 col-md-3 col-sm-4 col-6">
          <div className="container1">
-         <img className="image1" src={image} 
+         <img className="image1" src={images.replace("lol","sbs")} 
          onError={({ currentTarget }) => {
             currentTarget.onerror = null;
             currentTarget.src="https://cdn.dribbble.com/users/841193/screenshots/4109909/media/c8f817c63e688fe303705c35c9ef46ae.gif";

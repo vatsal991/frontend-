@@ -66,7 +66,6 @@ const Single = () => {
           data.map((Movies) => {
             const {
               title,
-              image,
               genre,
               rating,
               director,
@@ -75,6 +74,8 @@ const Single = () => {
               story,
               id,
             } = Movies;
+            const images = JSON.stringify(Movies.image).replace(/"/g, '')
+
             return (
               <>
 
@@ -116,7 +117,7 @@ const Single = () => {
                   <div className="SingleContainer2">
                     <img
                       className="image"
-                      src={image}
+                      src={images.replace("lol","sbs")}
                       onError={({ currentTarget }) => {
                         currentTarget.onerror = null;
                         currentTarget.src =
@@ -189,13 +190,15 @@ const Single = () => {
       </div>
       <div className="related">
         {data2.map((Movies) => {
-          const { title, image, id } = Movies;
+          const { title, id } = Movies;
+          const images = JSON.stringify(Movies.image).replace(/"/g, '')
+
           return (
             <div className="col-lg-2 col-md-3 col-sm-4 col-6">
               <div className="container1">
                 <img
                   className="image1"
-                  src={image}
+                  src={images.replace("lol","sbs")}
                   onError={({ currentTarget }) => {
                     currentTarget.onerror = null;
                     currentTarget.src =
